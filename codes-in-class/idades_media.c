@@ -11,7 +11,7 @@ int main() {
        do { 
             printf("Digite a idade do participante %d (%d-%d): ", i + 1, idade_min, idade_max);
             scanf("%d", &idades);
-       } while (idades[i] < idade_min || idades[i] < idade_max);
+       } while (idades[i] < idade_min || idades[i] > idade_max);
         soma += idades[i];
     }
     if (max_qtd != 0) {
