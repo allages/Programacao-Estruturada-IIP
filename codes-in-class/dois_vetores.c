@@ -4,11 +4,11 @@
 int main() {
     int vetor_a[qtd_valores], vetor_b[qtd_valores];
     for (int i = 0; i < qtd_valores; i += 1) {
-        printf("Insira o %dº inteiro: ", qtd_valores + 1);
-        scanf("%d", &vetor_a);
+        printf("Insira o %dº inteiro: ", i + 1);
+        scanf("%d", &vetor_a[i]);
     }
-    for (int i = 0; i < qtd_valores; i += 1) { 
-        prinf("%d ", vetor_a);
+    for (int j = 0; j < qtd_valores; j += 1) { 
+        printf("%d ", vetor_a[j]);
     }
     return 0;
 }

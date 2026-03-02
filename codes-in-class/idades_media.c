@@ -10,7 +10,7 @@ int main() {
     for (int i = 0; i < 5; i += 1) {
        do { 
             printf("Digite a idade do participante %d (%d-%d): ", i + 1, idade_min, idade_max);
-            scanf("%d", &idades);
+            scanf("%d", &idades[i]);
        } while (idades[i] < idade_min || idades[i] > idade_max);
         soma += idades[i];
     }
