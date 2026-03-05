@@ -7,6 +7,8 @@ int main() {
     int idades[max_qtd];
     double soma = 0.0;
     double media = 0.0;
+
+    
     for (int i = 0; i < 5; i += 1) {
        do { 
             printf("Digite a idade do participante %d (%d-%d): ", i + 1, idade_min, idade_max);
@@ -14,9 +16,13 @@ int main() {
        } while (idades[i] < idade_min || idades[i] > idade_max);
         soma += idades[i];
     }
+
+
     if (max_qtd != 0) {
         media = soma / (double) max_qtd;
         printf("A média da idade dos participantes é de %.2lf anos\n", media);
+
+
 
         printf("As idades maiores ou iguais as médias são: \n");
         for (int i = 0; i < max_qtd; i += 1) {

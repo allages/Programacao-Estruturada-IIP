@@ -7,8 +7,8 @@ int main() {
         printf("Insira o %dº inteiro: ", i + 1);
         scanf("%d", &vetor_a[i]);
     }
-    for (int j = 0; j < qtd_valores; j += 1) { 
-        printf("%d ", vetor_a[j]);
+    for (int i = 0; i < qtd_valores; i += 1) { 
+        printf("%d ", vetor_a[i]);
     }
     return 0;
 }
