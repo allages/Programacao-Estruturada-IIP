@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define qtd_alunos 5
+#define qtd_alunos 30
 #define nota_min 0.0
 #define nota_max 10.0
 
