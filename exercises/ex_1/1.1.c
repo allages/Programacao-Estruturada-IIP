@@ -12,7 +12,7 @@ int main () {
     double nota1[qtd_alunos], nota2[qtd_alunos], media[qtd_alunos], media_turma;
     printf("Insira a primeira nota dos estudantes:\n");
     inserir_notas(nota1, qtd_alunos);
-    printf("\n Insira a segunda nota dos estudantes:\n");
+    printf("\nInsira a segunda nota dos estudantes:\n");
     inserir_notas(nota2, qtd_alunos);
     calculomedia(media, nota1, nota2, qtd_alunos);
     media_turma = media_todos(media, qtd_alunos);
