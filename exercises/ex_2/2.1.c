@@ -30,7 +30,7 @@ int main() {
             if(binarySearch(vetor, tamanhoVetor, num) != -1){
                 printf("O índice em que o valor %d se encontra é: %d\n\n", num, binarySearch(vetor, tamanhoVetor, num));
             } else {
-                printf("Elemento não encontrado no vetor\n");
+                printf("(ERRO) Elemento não encontrado no vetor\n");
             }
         } else if (opcao == 3){
             int numeroEli;
