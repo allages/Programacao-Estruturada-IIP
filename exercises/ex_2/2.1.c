@@ -17,7 +17,6 @@ int main() {
     int vetor[tamanhoVetor];
     inserirValores(vetor, tamanhoVetor);
     insertionSort(vetor, tamanhoVetor);
-<<<<<<< HEAD
     int opcao = 1;
     do{
         printf("\n—————————— MENU ——————————\nDigite o número para as opções seguintes:\n[1] — Imprimir\n[2] — Consultar elemento\n[3] — Remover elemento\n[4] — Inserir Elemento\n[0] — Encerrar Programa\n— ");
@@ -53,45 +52,13 @@ int main() {
             if(adicionarElemento(vetor, tamanhoVetor, vetorAdi, tamVetorAdi, numeroAdi)) {
                 imprimirVetorAdi(vetorAdi, tamVetorAdi);
             } else {
-                printf("\nLimite do vetor (%d) atingido", tam_max);
+                printf("\n(ERRO) Limite do vetor (%d) atingido", tam_max);
             }
         } else if (opcao != 1 && opcao != 2 && opcao != 3 && opcao != 4 && opcao !=0) {
             printf("(ERRO) Opção inválida!\n");
         }
     } while (opcao != 0);
     printf("Programa encerrado!\n\n");
-=======
-    imprimirVetor(vetor, tamanhoVetor);
-    int num;
-    printf("Insira um valor a ser consultado no vetor: ");
-    scanf("%d", &num);
-    if(binarySearch(vetor, tamanhoVetor, num) != -1){
-        printf("O índice em que o valor %d se encontra é: %d\n\n", num, binarySearch(vetor, tamanhoVetor, num));
-        } else {
-            printf("(ERRO) Elemento não encontrado no vetor\n");
-        }
-    int numeroEli;
-    printf("Qual o valor que você deseja eliminar do vetor? ");
-    scanf("%d", &numeroEli);
-    int indiceEli = binarySearch(vetor, tamanhoVetor, numeroEli);
-    int tamVetorEli = tamanhoVetor - 1, vetorEli[tamVetorEli];
-    if (eliminarElemento(vetor, tamanhoVetor, vetorEli, tamVetorEli, indiceEli)) {
-        imprimirVetorEli(vetorEli, tamVetorEli);
-    } else if (tamVetorEli < 3) {
-        printf("\n(ERRO) Tamanho mínimo de vetor (%d) não atingido\n", tam_min);
-    } else {
-        printf("\n(ERRO) Elemento não encontrado");
-    }
-    int numeroAdi, tamVetorAdi = tamanhoVetor + 1, vetorAdi[tamVetorAdi];
-    printf("\nQual o valor inteiro que deseja adicionar ao vetor? ");
-    scanf("%d", &numeroAdi);
-    if(adicionarElemento(vetor, tamanhoVetor, vetorAdi, tamVetorAdi, numeroAdi)) {
-        imprimirVetorAdi(vetorAdi, tamVetorAdi);
-    } else {
-        printf("\n(ERRO) Limite do vetor (%d) atingido", tam_max);
-    }
-    printf("\n\n");
->>>>>>> c24469c9d3940367ab0f5832b6479006cabfe5c8
     return 0;
 }
 
