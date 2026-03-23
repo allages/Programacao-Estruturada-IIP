@@ -24,7 +24,7 @@ int main() {
     if(binarySearch(vetor, tamanhoVetor, num) != -1){
         printf("O índice em que o valor %d se encontra é: %d\n\n", num, binarySearch(vetor, tamanhoVetor, num));
         } else {
-            printf("Elemento não encontrado no vetor\n");
+            printf("(ERRO) Elemento não encontrado no vetor\n");
         }
     int numeroEli;
     printf("Qual o valor que você deseja eliminar do vetor? ");
@@ -44,7 +44,7 @@ int main() {
     if(adicionarElemento(vetor, tamanhoVetor, vetorAdi, tamVetorAdi, numeroAdi)) {
         imprimirVetorAdi(vetorAdi, tamVetorAdi);
     } else {
-        printf("\nLimite do vetor (%d) atingido", tam_max);
+        printf("\n(ERRO) Limite do vetor (%d) atingido", tam_max);
     }
     printf("\n\n");
     return 0;
