@@ -7,6 +7,7 @@ void inserirValores(int v[], int n);
 void insertionSort(int v[], int n);
 void imprimirVetor(int v[], int n);
 int binarySearch(int v[], int n, int x);
+void eliminarElemento(int v[], int x[], int vTam, int xTam, int eli);
 
 int main() {
     int tamanhoVetor = escolherTamanho();
@@ -18,7 +19,7 @@ int main() {
     printf("Insira um valor a ser consultado no vetor: ");
     scanf("%d", &num);
     printf("O índice em que o valor %d se encontra é: %d\n\n", num, binarySearch(vetor, tamanhoVetor, num));
-
+    int tamanhoVetor2, novoVetorEli[tamanhoVetor2];
 
 
 }
@@ -29,6 +30,7 @@ int escolherTamanho() {
         printf("\nInsira o tamanho do vetor (%d/%d): ", tam_min, tam_max);
         scanf("%d", &n);
     } while (n < 3 || n > 50);
+    return n;
 }
 
 void inserirValores(int v[], int n) {
@@ -73,4 +75,12 @@ int binarySearch(int v[], int n, int x){
         }
     }
     return -1;
+}
+
+void eliminarElemento(int v[], int x[], int vTam, int xTam, int eli){
+    int numeroEli;
+    printf("Qual o valor que você deseja eliminar do vetor? ");
+    scanf("%d", &numeroEli);
+    eli = binarySearch(v, vTam, numeroEli);
+
 }
