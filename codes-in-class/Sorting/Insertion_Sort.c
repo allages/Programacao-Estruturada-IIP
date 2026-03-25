@@ -35,7 +35,7 @@ void imprimirValores(int v[], int n) {
 }
 void insertionSort(int v[], int n) {
     int key; // A chave (valor de vetor[i])
-    int j; // O elemento anterior ao i (inicialmente)
+    int j; // O índice do elemento anterior ao i (inicialmente)
     for (int i = 1; i < n; i += 1){ // Percorrendo da esquerda pra direita a partir do índice 1
         key = v[i];
         j = i - 1 ;
