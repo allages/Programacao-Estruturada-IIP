@@ -1,10 +1,10 @@
-// Nosso objetivo inclui em criar em criar um vetor de tamanho 10 onde
+// Nosso objetivo inclui em criar em criar um vetor de tamanho 10 não ordenado e em seguida o programa irá imprimir a
+// quantidade de vezes que os valores aparecerem no vetor.
 
 #include <stdio.h>
 #include <stdbool.h>
 #define qtd 10
 
-void insertionSort(int v[],int n);
 void preencherValores(int v[], int n);
 bool verificarContido(int v, int x[], int n);
 void contagemVetor(int v[], int n);
