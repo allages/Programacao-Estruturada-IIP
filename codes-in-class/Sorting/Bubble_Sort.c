@@ -1,3 +1,11 @@
+// O Bubble Sort ou Método de Ordenação da Bolha é simples. O nome se dá porque o nosso objetivo aqui é "flutuar" o elemento
+// maior do vetor até o final e o processo irá se repetir até o vetor estiver ordenado. 
+// (1) Vamos pensar assim, se um vetor tem n elementos, para que todos os valores "maiores" sejam colocados no seu 
+// devido lugar, precisamos fazer esse processo n - 1 vezes até que sobre apenas o menor valor. Com isso, já entendemos 
+// o primeiro laço de repetição.
+// (2) O segundo laço de repetição será baseado nos índices do vetor, ou seja, caso tivéssemos que percorrer todo o vetor,
+// de praxe a variável j iria percorrer n
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -20,7 +28,6 @@ int main(){
 
 void preencherVetor(int v[], int n){
     srand(1);
-    int j = n;
     for (int i = 0; i < n; i+= 1){
         v[i] = rand() % 51;
     }
