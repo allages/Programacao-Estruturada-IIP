@@ -28,6 +28,7 @@ int main(){
     bubbleSort(vetor, tamanhoVetor);
     printf("\nSeu vetor ordenado utilizando Bubble Sort: ");
     imprimirVetor(vetor, tamanhoVetor);
+    return 0;
 }
 
 void preencherVetor(int v[], int n){

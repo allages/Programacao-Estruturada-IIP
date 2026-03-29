@@ -20,6 +20,7 @@ int main (){
     insertionSort(vetor, numero_vetor);
     imprimirValores(vetor, numero_vetor);
     printf("\n\n");
+    return 0;
 }
 
 void inserirValores(int v[], int n){

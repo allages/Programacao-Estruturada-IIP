@@ -14,6 +14,7 @@ int main(){
     preencherValores(vetor, qtd);
     printf("Valor —— Repetições\n");
     contagemVetor(vetor, qtd);
+    return 0;
 }
 
 void preencherValores(int v[], int n) {
