@@ -17,9 +17,9 @@ int main(){
     printf("Sua matriz inicial é:\n");
     imprimirMatriz(matrizInicial, LIN, COL);
     matrizTransposta(matrizInicial, matrizTransp, LIN, COL);
-    printf("Sua matriz transposta é:\n");
+    printf("\nSua matriz transposta é:\n");
     imprimirMatriz(matrizTransp, LIN, COL);
-
+    return 0;
 }
 
 void preencherMatriz(int m[][COL], int lin, int col){
@@ -42,7 +42,7 @@ void imprimirMatriz(int m[][COL], int lin, int col){
 
 void matrizTransposta(int m[][COL], int mT[][COL], int lin, int col){
     for(int i = 0; i < lin; i += 1){
-        for (int j = 0; i < col; i += 1){
+        for (int j = 0; j < col; j += 1){
             mT[i][j] = m[j][i];
         }
     }
