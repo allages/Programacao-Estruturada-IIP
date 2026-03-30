@@ -1,5 +1,5 @@
-// O programa tem como objetivo exercitar a manipulação de matrizes. Então foi feito um menu para utilizarmos as respectivas
-// funções.
+// Crie uma função que recebe 3 matrizes como parâmetro: matA, matB e matSoma, onde cada elemento da
+// matSoma é a soma dos elementos correspondentes das matrizes matA e matB.
 
 #include <stdio.h>
 #include <stdlib.h>
