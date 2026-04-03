@@ -17,7 +17,6 @@ void imprimirMatrizes(int m[][COLUNAMa], int linA, int colA,
      int y[][COLUNAMb], int linB, int colB);
 int verificarCompat(int m[][COLUNAMa], int y[][COLUNAMb], int z[][COLUNAMr],
      int linA, int colA, int linB, int colB, int linR, int colR);
-void zerarMatrizR(int m[][COLUNAMr], int lin, int col);
 void multiMatriz(int m[][COLUNAMa],
      int y[][COLUNAMb],
      int z[][COLUNAMr], int linR, int colR, int k_max);
@@ -30,7 +29,6 @@ int main(){
     printf("Matrizes utilizadas na multiplicação:\n");
     imprimirMatrizes(matA, LINHAMa, COLUNAMb, matB, LINHAMb, COLUNAMb);
     if (verificarCompat(matA, matB, matMult, LINHAMa, COLUNAMa, LINHAMb, COLUNAMb, LINHAMr, COLUNAMr)){
-        zerarMatrizR(matMult, LINHAMr, COLUNAMr);
         multiMatriz(matA, matB, matMult, LINHAMr, COLUNAMr, COLUNAMa);
         printf("\n\nResultado da multiplicação entre as matrizes:\n");
         imprimirMatrizR(matMult, LINHAMr, COLUNAMr);
@@ -101,20 +99,14 @@ int verificarCompat(int m[][COLUNAMa], int y[][COLUNAMb], int z[][COLUNAMr],
     return 1;
 }
 
-void zerarMatrizR(int m[][COLUNAMr], int lin, int col){
-        for (int i = 0; i < lin; i +=1){
-            for (int j = 0; j < col; j +=1){
-                m[i][j]= 0;
-        }
-    }
-}
 
 void multiMatriz(int m[][COLUNAMa],
     int y[][COLUNAMb],
     int z[][COLUNAMr], int linR, int colR, int k_max){
-        for (int i = 0; i < linR; i += 1){
-            for(int j = 0; j < colR; j += 1){
-                for(int k = 0; k < k_max; k +=1){
+        for (int i = 0; i < linR; i += 1){ //(linR == linA) O laço escolhe as linhas de A
+            for(int j = 0; j < colR; j += 1){ //(colR  == linB) O laço escolhe a coluna de B. Perceba que por ser interno, ele vai sempre funcionar da forma (linha x coluna)
+                z[i][j] = 0; // Zerando os v
+                for(int k = 0; k < k_max; k +=1){ //(k_max == colA) Ou seja, a quantidade de vezes que vai ocorrer a (linha x coluna[j]) para depois somar
                     z[i][j] += m[i][k] * y[k][j];
                 }
             }
