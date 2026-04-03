@@ -56,9 +56,11 @@ void menu(int m[][COL], int lin, int col){
         } else if (opcao == 3){
             zerarDiagonalPrinc(m, lin, col);
             imprimirMatriz(m, lin, col);
+            preencherMatriz(m, lin, col); // O valor da matriz vai voltar ao principal
         } else if (opcao == 4){
             zerarDiagonalSec(m, lin, col);
             imprimirMatriz(m, lin, col);
+            preencherMatriz(m,lin,col); // O valor da matriz vai voltar ao principal
         } else if (opcao != 0){
             printf("\n[ERRO] Opção inválida, insira alguns dos valores acima!\n\n");
         }
