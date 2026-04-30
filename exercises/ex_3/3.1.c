@@ -11,7 +11,7 @@ void preencherAluno(struct Aluno *a){
     scanf("%lf", &a->nota1);
     printf("Digite a nota 2: ");
     scanf("%lf", &a->nota2);
-    printf("/n");
+    printf("\n");
 }
 
 void calcularMediaAluno(struct Aluno *a){
@@ -30,7 +30,7 @@ double calcularMediaTurma(struct Aluno a[], int n){
 void imprimirMaiorqueMedia(struct Aluno a[], int n, double mediaT){
     for (int i = 0; i < n; i += 1){
         if (a[i].media > mediaT){
-            printf("A média do aluno %d é acima da média total da turma %.2lf/nNOTA1: %.2lf/nNOTA2: %.2lf/n", i + 1, mediaT, a[i].nota1, a[i].nota2);
+            printf("A média do aluno %d é acima da média total da turma %.2lf\nNOTA1: %.2lf\nNOTA2: %.2lf\n", i + 1, a[i].media, a[i].nota1, a[i].nota2);
         }
     }
 }
@@ -46,6 +46,7 @@ int main(){
     }
 
     double mediaTurma = calcularMediaTurma(turma, TAM);
+    printf("A média da turma é: ", mediaTurma);
     imprimirMaiorqueMedia(turma, TAM, mediaTurma);
     return 0;
 }
