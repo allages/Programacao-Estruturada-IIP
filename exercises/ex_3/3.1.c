@@ -40,7 +40,7 @@ int main(){
     struct Aluno turma[TAM];
 
     for (int i = 0; i < TAM; i +=1){
-        printf("Aluno nº %d", i + 1);
+        printf("Aluno nº %d\n", i + 1);
         preencherAluno(&turma[i]);
         calcularMediaAluno(&turma[i]);
     }
