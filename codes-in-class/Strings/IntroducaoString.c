@@ -31,7 +31,7 @@ void inserirStringFgets(char str[]){
   str[strcspn(str, "\n")] = '\0'; // Função que retira o '\n' da string
   printf("%s\n", str);
 
-  // A última posição do fgets armazena o delimitador de strings, ou seja, só é possível armazenar armazenar 199 caracteres nesse caso.
+  // A última posição do fgets armazena o delimitador de strings ('\0'), ou seja, só é possível armazenar armazenar 199 caracteres nesse caso.
 }
 
 int main(){
@@ -48,6 +48,7 @@ int main(){
     printf("%s", frase2); // A string frase2 foi sobreescrita. 
 
     inserirStringFgets(frase2);
+    quantidadeCaractere(frase2);
 
     return 0;
 }
