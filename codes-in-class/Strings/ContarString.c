@@ -4,9 +4,9 @@
 
 void verificarASCII(char str[], int tam){
     for (int i = 0; i < tam; i += 1){
-        printf("%d", str[i]);
+        printf("%d = %c\n", str[i], str[i]);
     }
-    printf("\n%s", str);
+    printf("%s", str);
 }
 
 int quantidadeString(char str[]){
